@@ -1,4 +1,4 @@
-# Image-Docker-Laravel-Echo-server
+# Docker Image for Laravel Echo Server
 
 
 - Here's the file image field in docker-compose.yml
