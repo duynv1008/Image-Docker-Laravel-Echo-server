@@ -1,7 +1,11 @@
-FROM redis:latest
+FROM node:12-alpine
 
-LABEL maintainer="Name <example@example.com>"
+WORKDIR /app
 
-EXPOSE 6379
+COPY ./laravel-echo-server.json /app/laravel-echo-server.json
 
-CMD ["redis-server"]
+RUN npm install -g laravel-echo-server
+
+EXPOSE 6001
+
+CMD ["laravel-echo-server", "start"]
